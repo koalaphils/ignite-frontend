@@ -1,0 +1,31 @@
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+    </li>
+    <li *ngFor="let nav of navItems">
+      <a [routerLink]="nav.link" class="nav-link">{{ nav.text }}</a>
+    </li>
+  </ul>
+
+  <!-- TODO: Figure out why layout gets distorted when used inside a component. -->
+  <ul class="navbar-nav ml-auto">
+    <!-- Messages Dropdown Menu -->
+    <li class="nav-item dropdown">
+      <a class="nav-link" data-toggle="dropdown" href="#">
+        <div class="user-panel d-flex">
+          <div class="image">
+            <img src="assets/images/jc.jpg" class="img-circle" alt="User Image">
+          </div>
+        </div>
+      </a>
+
+      <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+        <a [routerLink]="['/auth/logout']" class="dropdown-item">
+          <i class="fas fa-sign-out-alt mr-2"></i> Logout
+        </a>
+      </div>
+    </li>
+  </ul>
+</nav>
+

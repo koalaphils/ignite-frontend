@@ -1,0 +1,18 @@
+<ul class="navbar-nav ml-auto">
+    <!-- Messages Dropdown Menu -->
+    <li class="nav-item dropdown">
+      <a class="nav-link" data-toggle="dropdown" href="#">
+        <div class="user-panel d-flex">
+          <div class="image">
+            <img src="assets/images/jc.jpg" class="img-circle" alt="User Image">
+          </div>
+        </div>
+      </a>
+
+      <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+        <a [routerLink]="['/auth/logout']" class="dropdown-item">
+          <i class="fas fa-sign-out-alt mr-2"></i> Logout
+        </a>
+      </div>
+    </li>
+  </ul>
