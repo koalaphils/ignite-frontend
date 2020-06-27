@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { SharedRoutingModule } from './shared-routing.module';
 import { SidebarLayoutComponent } from './layout/sidebar-layout/sidebar-layout.component';
@@ -12,6 +13,9 @@ import { UserContextMenuComponent } from './components/user-context-menu/user-co
 import { FormGroupComponent } from './forms/form-group/form-group.component';
 import { CardComponent, CardHeaderComponent, CardBodyComponent } from './components/card/card.component';
 import { ContentHeaderComponent, Content, ContentBody } from './components/content/content.component';
+import { InputComponent } from './forms/input/input.component';
+import { LabelComponent } from './forms/label/label.component';
+import { ErrorsComponent } from './forms/errors/errors.component';
 
 // Exportable Components
 const COMPONENTS = [
@@ -21,6 +25,10 @@ const COMPONENTS = [
   CardComponent,
   CardHeaderComponent,
   CardBodyComponent,
+  FormGroupComponent,
+  InputComponent,
+  LabelComponent,
+  ErrorsComponent
 ];
 
 @NgModule({
@@ -33,11 +41,13 @@ const COMPONENTS = [
     SidebarUserComponent,
     UserContextMenuComponent,
     FormGroupComponent, 
-    ...COMPONENTS
+    ...COMPONENTS, InputComponent, LabelComponent, ErrorsComponent
   ],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    SharedRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     ...COMPONENTS

@@ -1,0 +1,10 @@
+<input 
+    [formControl]="control"
+  type="text" 
+  class="form-control" 
+  [ngClass]="{
+    'is-valid': status === 'valid',
+    'is-invalid' : status === 'invalid',
+    'is-warning': status === 'warning'
+  }"
+  [placeholder]="placeholder">

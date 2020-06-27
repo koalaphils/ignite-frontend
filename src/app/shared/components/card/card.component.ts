@@ -18,7 +18,7 @@ export class CardComponent {
   selector: 'app-card-header',
   template: `
     <div class="card-header">
-      <ng-content></ng-content>
+      <h3 class="card-title"><ng-content></ng-content></h3>
     </div>
   `,
   styleUrls: ['./card.component.css']

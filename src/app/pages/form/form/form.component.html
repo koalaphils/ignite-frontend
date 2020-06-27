@@ -1,19 +1,66 @@
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>General Form</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">General Form</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
-  </div>
-  
+<app-content>
+  <app-content-header>
+    <h1>Form</h1>
+  </app-content-header>
+  <app-content-body>
+    <div class="row">
+      <div class="col-md-6 col-lg-6">
+        <app-card>
+          <app-card-header>
+            Form Inputs
+          </app-card-header>
+          <app-card-body>
+            <app-form-group>
+              <app-label>Default Input</app-label>
+              <app-input placeholder="Enter..."></app-input>
+            </app-form-group>
+            <app-form-group>
+              <app-label>Input With Valid Status</app-label>
+              <app-input status="valid" placeholder="Enter..."></app-input>
+            </app-form-group>
+            <app-form-group>
+              <app-label>Input With Invalid Status</app-label>
+              <app-input status="invalid" placeholder="Enter..."></app-input>
+            </app-form-group>
+            <app-form-group>
+              <app-label>Input With Warning Status</app-label>
+              <app-input status="warning" placeholder="Enter..."></app-input>
+            </app-form-group>
+          </app-card-body>
+        </app-card>
+      </div>
+
+      <div class="col-md-6 col-lg-6">
+        <app-card>
+          <app-card-header>
+            Form Inputs With Error Messages
+          </app-card-header>
+          <app-card-body>
+            <app-form-group>
+              <app-label>Form Control With Errors</app-label>
+              <app-input status="invalid" placeholder="Enter..."></app-input>
+              <app-errors [errors]="errors"></app-errors>
+            </app-form-group>
+          </app-card-body>
+        </app-card>    
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-lg-6">
+        <app-card>
+          <app-card-header>
+            Reactive Forms
+          </app-card-header>
+          <app-card-body>
+            <app-form-group>
+              <app-label>Reactive Form Control</app-label>
+              <app-input [formControl]="control" placeholder="Enter..."></app-input>
+            </app-form-group>
+            <p>Form Value: {{ value }}</p>
+          </app-card-body>
+        </app-card>
+      </div>
+    </div>
+  </app-content-body>
+</app-content>
