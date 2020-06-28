@@ -12,5 +12,10 @@ export const sidebarNavItems: NavItem[] = [
     text: 'Dashboard',
     link: '/pages/dashboard',
     iconClass: 'fas fa-tachometer-alt'
+  },
+  {
+    text: 'Form',
+    link: '/pages/form',
+    iconClass: 'fas fa-book-open'
   }
 ];
