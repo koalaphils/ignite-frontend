@@ -17,5 +17,10 @@ export const sidebarNavItems: NavItem[] = [
     text: 'Form',
     link: '/pages/form',
     iconClass: 'fas fa-book-open'
+  },
+  {
+    text: 'Profile',
+    link: '/pages/profile',
+    iconClass: 'fas fa-book-open'
   }
 ];
