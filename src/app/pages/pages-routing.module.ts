@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SidebarLayoutComponent } from '../shared/layout/sidebar-layout/sidebar-layout.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { FormModule } from './form/form.module';
+import { ProfileModule } from './profile/profile.module';
 
 const routes: Routes = [
   {
@@ -18,6 +19,11 @@ const routes: Routes = [
         path: 'form',
         loadChildren: () => import('./form/form.module')
           .then(m => m.FormModule),
+      },
+      {
+        path: 'profile',
+        loadChildren: () => import('./profile/profile.module')
+          .then(m => m.ProfileModule),
       }
     ]
   }
